@@ -1,0 +1,24 @@
+{
+  "name": "sala-de-juntas",
+  "version": "0.0.1",
+  "description": "crud para reservar salas de juntas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepernando/Sala-de-Juntas.git"
+  },
+  "keywords": [
+    "sala",
+    "de",
+    "juntas"
+  ],
+  "author": "Jose Fernando",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/pepernando/Sala-de-Juntas/issues"
+  },
+  "homepage": "https://github.com/pepernando/Sala-de-Juntas#readme"
+}
