@@ -20,6 +20,7 @@ html(lang="en")
                         th 
                         th Nombre de la sala
                         th Disponibilidad
+                        th 
                     - array.forEach( e => {
                     tr 
                         td #{e.idsala}
@@ -29,5 +30,13 @@ html(lang="en")
                         - }else{
                         td No disponible
                         - }
+                        td 
+                            div(class="flex two")
+                                a(href="/salas/borrar/" + e.idsala)
+                                    button(class="error") 
+                                        i(class="fas fa-trash-alt")
+                                a(href="www.google.com")
+                                    button(class="success") 
+                                        i(class="far fa-edit")
                     - })
             a(href="/") Regresar 
