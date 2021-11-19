@@ -6,16 +6,16 @@ html(lang="en")
     body 
         div(id="cuerpo")
             h2 Control de Salas de Juntas
-            form(action="/salas/agregar" method="post") 
+            form(action="/salas/agregar" method="post" enctype="application/x-www-form-urlencoded") 
                 fieldset(class="flex two-1200 third-1200")
                     label(for="nombresala") Nombre de la Sala  
-                    input(type="text" id="nombresala" placeholder="Nombre de la sala") 
+                    input(type="text" name="nombresala" placeholder="Nombre de la sala") 
                     button(type="submit") Agregar Sala 
                         i(class="fas fa-plus-square") 
             br
             div(class="half-1200")
                 hr
-                table(class="table")
+                table(class="primary")
                     tr 
                         th 
                         th Nombre de la sala
@@ -30,3 +30,4 @@ html(lang="en")
                         td No disponible
                         - }
                     - })
+            a(href="/") Regresar 
