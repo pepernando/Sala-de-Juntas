@@ -28,7 +28,6 @@ router.post('/',(req,res) => {
 //borrar sala
 router.get('/borrar/:id',(req,res) => {
     let id = req.params.id
-    console.log('id es',id)
     db.serialize( () => {
         db.run('delete from salas where idsala=?',id)
     })

@@ -1,0 +1,54 @@
+doctype html
+html(lang="en")
+    head
+        include head.pug
+        title Reservaciones
+    body 
+        div(id="cuerpo")
+            h2 Control de Reservaciones
+            form(action="/reservaciones" method="post" enctype="application/x-www-form-urlencoded" id="form" onsubmit= "return validar()") 
+                div(class="third-1200")
+                    div(class="flex two")
+                        label(for="selectorsala") Sala:
+                        div(class="menu" id="selectorsala")
+                            select(name="idsala")
+                                each sala in salas
+                                    option(value=sala.idsala) #{sala.nombre}
+                    label(for="fechainicio") Fecha inicio
+                    input(type="datetime-local", name="fechainicio" id="fechainicio")
+                    br
+                    label(for="fechafin") Fecha fin                    
+                    input(type="datetime-local", name="fechafin" id="fechafin")
+                    button(type="submit") Reservar 
+                        i(class="far fa-clock") 
+                    div(class="card" hidden id="mensaje")
+                        contendio de la carta
+            br
+            div(class="two-third-1200")
+                hr
+                table(class="primary")
+                    tr 
+                        th 
+                        th Sala
+                        th Hora Inicio
+                        th Hora Fin
+                        th 
+                    - array.forEach( e => {
+                    tr 
+                        td #{e.idreservacion}
+                        td #{e.idsala}
+                        - let d1 = new Date(e.fechainicio) 
+                        - let d2 = new Date(e.fechafin)                         
+                        td #{d1.toLocaleDateString()} #{d1.toLocaleTimeString().substring(0,5)}
+                        td #{d2.toLocaleDateString()} #{d2.toLocaleTimeString().substring(0,5)}
+                        td 
+                            div(class="flex two")
+                                a(href="/reservaciones/borrar/" + e.idreservacion)
+                                    button(class="error") 
+                                        i(class="fas fa-trash-alt")
+                                a(href="/reservaciones/editar/" + e.idreservacion)
+                                    button(class="success") 
+                                        i(class="far fa-edit")
+                    - })
+            a(href="/") Regresar 
+    script(src="/js/reservaciones.js") 

@@ -41,11 +41,10 @@ function validar(){
     let d2 = new Date(param2)
     let errores = validarFecha(d1,d2)
     if(errores.length===0){
-        alert('Todo correcto :)')
+        // alert('Todo correcto :)')
         return true
     }else{
         alert(errores.join('\n'))
         return false
     }
 }
-document.getElementById('submit').onclick('submit',validar)
