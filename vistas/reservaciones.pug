@@ -36,7 +36,7 @@ html(lang="en")
                     - array.forEach( e => {
                     tr 
                         td #{e.idreservacion}
-                        td #{e.idsala}
+                        td #{e.nombre}
                         - let d1 = new Date(e.fechainicio) 
                         - let d2 = new Date(e.fechafin)                         
                         td #{d1.toLocaleDateString()} #{d1.toLocaleTimeString().substring(0,5)}

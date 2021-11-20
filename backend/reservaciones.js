@@ -16,7 +16,7 @@ router.get('/', (req,res) => {
         }
         arraySalas.push(row)
     },() => {
-        db.each("SELECT * FROM reservaciones", (err, row) => {
+        db.each("SELECT * FROM vreservaciones", (err, row) => {
             if (err) {
                 console.log(err.message);
             }
