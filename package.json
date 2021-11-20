@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/pepernando/Sala-de-Juntas/issues"
   },
-  "homepage": "https://github.com/pepernando/Sala-de-Juntas#readme"
+  "homepage": "https://github.com/pepernando/Sala-de-Juntas#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-schedule": "^2.0.0",
+    "pug": "^3.0.2",
+    "sqlite3": "https://github.com/mapbox/node-sqlite3/tarball/master"
+  }
 }
