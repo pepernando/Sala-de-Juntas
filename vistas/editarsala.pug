@@ -5,8 +5,8 @@ html(lang="en")
         title Editar Sala 
     body 
         div(id="cuerpo") 
-            h2 Editar Sala #{id}
-            form(action="/salas/"+id method="post" enctype="application/x-www-form-urlencoded") 
+            h2 Editar Sala #{idsala}
+            form(action="/salas/"+idsala method="post" enctype="application/x-www-form-urlencoded") 
                 fieldset(class="flex two-1200 third-1200")
                     label(for="nombresala") Nombre de la Sala  
                     input(type="text" name="nombresala" placeholder="Nombre de la sala") 

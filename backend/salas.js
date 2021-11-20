@@ -38,7 +38,7 @@ router.get('/borrar/:id',(req,res) => {
 //Editar pagina
 router.get('/editar/:id',(req,res) => {
     let id = req.params.id
-    res.render('editarsala',{id: id})
+    res.render('editarsala',{idsala: id })
 })
 // Accion de Editar
 router.post('/:id',(req,res) => {
